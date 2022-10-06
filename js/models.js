@@ -83,7 +83,7 @@ class StoryList {
     // only spent like 30 seconds on it - does it matter what format? I just thought I
     // should follow the format set out above.
     const res = await axios({
-      method: 'POST',
+      method: 'POST', //have to be logged in for this to work
       url: `${BASE_URL}/stories`, 
       data: { token: userToken, story: { title, author, url } }
     });
@@ -98,8 +98,9 @@ class StoryList {
   async deleteStory(user, storyId) {
     const userToken = user.loginToken;
     await axios({
-      method: 'DELETE',
+      // method: 'DELETE',
       url: `${BASE_URL}/stories/${storyId}`, 
+      method: 'DELETE',
       data: { token: userToken } 
   });
 

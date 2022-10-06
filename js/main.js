@@ -4,6 +4,7 @@
 
 const $body = $("body");
 
+const $mainNavLinks = $('.main-nav-links')
 const $storiesLoadingMsg = $("#stories-loading-msg");
 const $allStoriesList = $("#all-stories-list");
 const $favStoriesList = $('#fav-stories-list');
@@ -20,6 +21,8 @@ const $navUserProfile = $("#nav-user-profile");
 const $navLogOut = $("#nav-logout");
 const $navStorySubmit = $('#nav-submit-story');
 const $navFavorites = $('#nav-favs');
+
+const $userProfile = $('#user-profile')
 
 /** To make it easier for individual components to show just themselves, this
  * is a useful function that hides pretty much everything on the page. After
