@@ -82,11 +82,13 @@ class StoryList {
     // out of curiosity, this is a different format than was in the handouts, and Colt
     // only spent like 30 seconds on it - does it matter what format? I just thought I
     // should follow the format set out above.
-    const res = await axios({
-      method: 'POST', //have to be logged in for this to work
-      url: `${BASE_URL}/stories`, 
-      data: { token: userToken, story: { title, author, url } }
-    });
+    // const res = await axios({
+    //   method: 'POST', //have to be logged in for this to work
+    //   url: `${BASE_URL}/stories`, 
+    //   data: { token: userToken, story: { title, author, url } }
+    // });
+
+    const res = await axios.post(`${BASE_URL}/stories`, { token: userToken, story: { title, author, url } });
 
 
     const story = new Story(res.data.story);
